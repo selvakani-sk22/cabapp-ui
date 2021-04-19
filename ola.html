@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Level3</title>
+</head>
+<body>
+	<form action="level4.html" method="POST">
+	<center>
+	<h1>OLA CABS</h1>
+		<h1>OLA Booking</h1>
+		<label><h2>Select Your Comfort Zone :</h2></label><br>
+		<table border="2">
+		<thead>
+			<tr><th><B>Type</B></th><th><B>Price Per Km</B></th></tr>
+		</thead>
+		<tbody>
+			<tr><td>Micro</td><td>Rs.10</td></tr>
+			<tr><td>Mini</td><td>Rs.15</td></tr>
+			<tr><td>Prime</td><td>Rs.20</td></tr>
+		</tbody>
+		</table>
+		<br><br>
+		<select name="cabtype">
+			<option disabled>--Select Cab Type--</option>
+			<option value="micro">Micro</option>
+			<option value="mini">Mini</option>
+			<option value="prime">Prime</option>
+		</select>
+		<br><br>
+		<input type="number" name="km" id="km" placeholder="Enter No.Of Kilometer" required>
+		<br><br>
+		<input type="checkbox" name="senior" value="senior">Senior Citizen</input><br><br>
+		<label>Gender : </label>
+		<input type="radio" name="male" value="male">Male
+		<input type="radio" name="female" value="female" >Female<br><br>
+		<label>Journey Date</label>
+		<input type="date" name="journeydate" min="2021-04-19" max="2021-04-27" required><br><br>
+		<label>Pick Up Time</label>
+		<input type="time" name="time" required>
+		<br><br>
+		<label><h3>Please Do Follow..!</h3></label>
+		<ul>
+		<li>Must Wear Masks</li>
+		<li>Do not eat inside the cab</li>
+		</ul>
+		<button>Submit</button>
+	</center>
+	</form>
+</body>
+</html>
