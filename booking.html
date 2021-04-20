@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Level3</title>
+</head>
+<body>
+
+<h1>Welcome To OLA Cabs</h1>
+<h2>Choose Your Comforts</h2>
+<br>
+<form onsubmit="booking()">
+<label>Select Cab Type :</label><br><br>
+		<select name="cabtype" id="cabType" required>
+			<option disabled>--Select Cab Type--</option>
+			<option value="micro" >Micro</option>
+			<option value="mini" >Mini</option>
+			<option value="prime">Prime</option>
+		</select>
+		<br><br>
+		<input type="number" name="km" id="km" placeholder="Enter No.Of Kilometer" required>
+		<br><br>
+		<input type="checkbox" name="senior" id="senior" value="senior">Senior Citizen<br><br>
+		<label id="gender">Gender : </label>
+		  <input type="radio" id="gender" name="gender" value="male">Male
+		  <input type="radio" id="gender" name="gender" value="female">Female
+		  <input type="radio" id="gender" name="gender" value="other">Others<br><br>
+		<button>Submit</button>
+</form>
+<script>
+function booking()
+{
+	event.preventDefault();
+
+    let cabType=document.querySelector("#cabType").value;
+    let km=document.querySelector("#km").value;
+    let senior=document.querySelector("#senior").value;
+    let price =0;
+    switch(cabType)
+    {
+    case"micro":
+    	 price=km*10;
+    	break;
+    case"mini":
+    	 price=km*15;
+    	break;
+    case"prime":
+    	 price=km*20;
+    	break;
+    }
+    let amount=price+(price*0.07);
+    alert("Your Bill amount is "+amount+" Rs/-");
+    alert("Thank You for Choosing Us...");
+}
+</script>
+
+</body>
+</html>
